@@ -1,3 +1,6 @@
+src.rpm is available from download section:
+ https://github.com/downloads/bookwar/lxpanelx-rpm/lxpanelx-0.5.6-1.svn146.src.rpm
+
 To build the package from scratch:
 
 * Install utilities
