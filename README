@@ -1,7 +1,7 @@
 src.rpm is available from download section:
  https://github.com/downloads/bookwar/lxpanelx-rpm/lxpanelx-0.5.6-1.svn146.src.rpm
 
-Package conflicts yum lxpanel package.
+Package conflicts with original lxpanel package.
 
 First rebuild
 
@@ -14,4 +14,6 @@ $ yum shell
  > install lxpanelx-0.5.6-1.svn146.<smth>.rpm
  > run
 
-then relogin into LXDE.
+Check that lxde-common has not been uninstalled.
+
+Then relogin into LXDE.
