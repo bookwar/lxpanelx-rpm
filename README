@@ -1,15 +1,17 @@
 src.rpm is available from download section:
  https://github.com/downloads/bookwar/lxpanelx-rpm/lxpanelx-0.5.6-1.svn146.src.rpm
 
-To build the package from scratch:
+Package conflicts yum lxpanel package.
 
-* Install utilities
- su -c "yum install rpmdevtools @development-tools"
-* Setup rpm build tree
- rpmdev-setuptree
-* Put spec-file in ~/rpmbuild/SPECS/
-* Download sources to ~/rpmbuild/SOURCES/ using get_sources script.
-* Install dependencies
- su -c "yum-builddep ~/rpmbuild/lxpanelx.spec"
-* Build
- rpmbuild -ba ~/rpmbuild/SPECS/lxpanelx.spec
+First rebuild
+
+$ rpmbuild --rebuild lxpanelx-0.5.6-1.svn146.src.rpm
+
+then install
+
+$ yum shell
+ > remove lxpanel
+ > install lxpanelx-0.5.6-1.svn146.<smth>.rpm
+ > run
+
+then relogin into LXDE.
