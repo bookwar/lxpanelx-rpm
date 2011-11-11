@@ -1,0 +1,13 @@
+#!/bin/bash
+
+VERSION=0.5.6
+REV=146
+
+# Main sources
+svn export -r $REV http://lxpanelx.googlecode.com/svn/trunk/ lxpanelx-${VERSION}-svn${REV}
+tar --remove-files -czf lxpanelx-${VERSION}-svn${REV}.tar.gz lxpanelx-${VERSION}-svn${REV}
+
+#Patches
+wget https://raw.github.com/bookwar/lxpanelx-rpm/master/lxpanel-0.3.8.1-nm-connection-editor.patch
+wget https://github.com/bookwar/lxpanelx-rpm/blob/master/lxpanel-0.5.4-default.patch
+wget https://github.com/bookwar/lxpanelx-rpm/blob/master/lxpanel-0.5.5-dsofix.patch
